@@ -1,6 +1,7 @@
 import { settings } from "@/settings/settings";
 import { headers } from "next/headers";
 import { isMobile } from "../../lib/isMobile";
+import "@/components/ui/ScrollToTopMobile"
 import "./rodapeMobile.scss";
 
 import {
@@ -9,6 +10,7 @@ import {
   FaChevronUp,
   FaPhoneAlt,
 } from "react-icons/fa";
+import ScrollToTopMobile from "@/components/ui/ScrollToTopMobile";
 
 const { siteName, ddd, whatsappApi, numeroTelefone, email } = settings;
 
@@ -44,14 +46,16 @@ export default async function RodapeMobile() {
             <div style={{ display: "none" }}>{siteName}</div>
           </a>
 
-          <a
+          <ScrollToTopMobile/>
+
+          {/* <a
             href="#"
             className="voltar-para-o-topo-mobile icone"
             title="voltar ao topo"
           >
             <FaChevronUp />
             <div style={{ display: "none" }}>{siteName}</div>
-          </a>
+          </a> */}
         </div>
       </div>
     )

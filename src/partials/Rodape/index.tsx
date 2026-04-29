@@ -5,10 +5,10 @@ import { IoMailOutline } from "react-icons/io5";
 import Image from "next/image";
 import Link from "next/link";
 import "@/partials/Rodape/rodape.scss";
-import ScrollToTop from "@/components/ScrollToTop";
 import { url, settings } from "@/settings/settings";
 import { usePathname } from "next/navigation";
 import { FaMapMarkedAlt } from "react-icons/fa";
+
 
 export default function Rodape() {
   const { siteName, selosDark, numeroTelefone, ddd, email, whatsappApi } =
@@ -153,7 +153,7 @@ export default function Rodape() {
           <span style={{ display: "none" }}>.</span>
         </a>
       </div>
-      <ScrollToTop />
+      Scrolltotop
     </footer>
   );
 }
