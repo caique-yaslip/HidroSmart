@@ -9,7 +9,6 @@ import { url, settings } from "@/settings/settings";
 import { usePathname } from "next/navigation";
 import { FaMapMarkedAlt } from "react-icons/fa";
 
-
 export default function Rodape() {
   const { siteName, selosDark, numeroTelefone, ddd, email, whatsappApi } =
     settings;
@@ -30,6 +29,12 @@ export default function Rodape() {
           <ul>
             <li>
               <Link href="/">Home</Link>
+            </li>
+            <li>
+              <Link href="/sobre">Sobre</Link>
+            </li>
+            <li>
+              <Link href={"/servicos"}>servicos</Link>
             </li>
             <li>
               <Link href="/contato">Contato</Link>
@@ -54,7 +59,10 @@ export default function Rodape() {
             </li>
             <li>
               <FaMapMarkedAlt />{" "}
-              <Link href={urlMaps} target="_blank">{`${rua}, ${numero} - ${cidade} - ${estado}, ${cep}`}</Link>
+              <Link
+                href={urlMaps}
+                target="_blank"
+              >{`${rua}, ${numero} - ${cidade} - ${estado}, ${cep}`}</Link>
             </li>
           </ul>
         </div>

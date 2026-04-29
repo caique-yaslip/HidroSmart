@@ -164,8 +164,8 @@
   display: none;
   flex-direction: column;
   gap: 7px;
-  background: none;
-  border: none;
+  background: white;
+  border-radius: 30px;
   cursor: pointer;
   padding: 0.35rem;
 }

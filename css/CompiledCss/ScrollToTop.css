@@ -1,33 +1,68 @@
-/* ---------------------- Botao Voltar Ao Topo ------------------ */
-.voltar-para-o-topo {
-  display: flex;
+.scroll-button {
   position: fixed;
-  justify-content: center;
+  bottom: 40px;
+  right: 40px;
+  z-index: 9999;
+  display: flex;
   align-items: center;
-  right: 38px;
-  bottom: 35px;
-  z-index: 99;
-  width: 50px;
-  height: 50px;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
-  box-shadow: inset 0 0 0 3px rgba(179, 179, 179, 0.568);
-  background-color: #ececec;
-  transition: all 0.3s ease;
-}
-.voltar-para-o-topo svg {
-  color: #4824aa;
-  transition: all 0.3s ease;
-}
-.voltar-para-o-topo:hover {
-  background-color: #4824aa;
-  transition: all 0.3s ease;
-  box-shadow: inset 0 0 0 3px rgba(189, 189, 189, 0.438);
-}
-.voltar-para-o-topo:hover svg {
-  color: white;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(135deg, #92bda8, #fff687);
+  border: 2px solid white;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.3);
+  transition: all 0.5s ease;
 }
 @media (max-width: 768px) {
-  .voltar-para-o-topo {
-    display: none !important;
+  .scroll-button {
+    display: none;
   }
+}
+.scroll-button:hover {
+  transform: scale(1.1);
+}
+.scroll-button:active {
+  transform: scale(0.95);
+}
+.scroll-button.visible {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+.scroll-button.hidden {
+  transform: translateY(80px) scale(0.5);
+  opacity: 0;
+  pointer-events: none;
+}
+.scroll-button .progress-ring {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+.scroll-button .progress-bg {
+  color: rgba(146, 189, 168, 0.25);
+}
+.scroll-button .progress-bar {
+  color: #000;
+  transition: stroke-dashoffset 0.15s ease-out;
+}
+.scroll-button .progress-text {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.scroll-button .progress-text span {
+  font-size: 10px;
+  font-weight: bold;
+  color: #ffffff;
+  line-height: 1;
+  font-family: "Numbers", sans-serif;
+  color: #000;
 }
