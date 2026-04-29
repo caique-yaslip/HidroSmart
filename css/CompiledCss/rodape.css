@@ -1,0 +1,262 @@
+footer {
+  background-color: rgba(4, 0, 255, 0.1843137255);
+  color: #000;
+}
+footer .top {
+  display: flex;
+  align-items: center;
+  max-width: 85%;
+  padding: 70px 0;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: stretch;
+  line-height: 30px;
+}
+@media (max-width: 768px) {
+  footer .top .menuFooter ul li,
+  footer .top .contactFooter ul li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+}
+footer .top .contactFooter {
+  display: flex;
+  flex-direction: column;
+}
+footer .top .contactFooter ul li {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #242424;
+}
+footer .top li a {
+  font-family: var(--font-poppins);
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+footer .top li a::before {
+  content: "";
+  background-color: #1d1d1d;
+  position: absolute;
+  left: 0px;
+  bottom: 3px;
+  width: 100%;
+  height: 2px;
+  transform: scaleX(0);
+  transition: 0.4s ease;
+  transform-origin: left;
+}
+footer .top li a:hover::before {
+  transform: scaleX(1);
+}
+@media (max-width: 768px) {
+  footer .top li a {
+    justify-content: center;
+  }
+}
+footer .top h2 {
+  font-size: 24px;
+  font-weight: 800;
+  font-family: var(--font-josefin);
+  color: #000;
+}
+footer .top .logoFooter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 1024px) {
+  footer .top .logoFooter {
+    width: 100%;
+    padding: 0 0 31px 0;
+  }
+}
+footer .top .logoFooter img {
+  width: 250px;
+}
+@media (max-width: 1024px) {
+  footer .top {
+    display: flex;
+    justify-items: center;
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 768px) {
+  footer .top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+}
+footer .footerSelos {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+footer .footerSelos .logoYaslip {
+  width: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+}
+footer .footerSelos .logoYaslip a {
+  width: 100%;
+}
+footer .footerSelos .logoYaslip object {
+  width: 100px;
+  height: 160px;
+}
+@media (max-width: 768px) {
+  footer .footerSelos .logoYaslip {
+    width: 100%;
+  }
+  footer .footerSelos .logoYaslip img {
+    width: 130px;
+  }
+}
+footer .footerSelos ul {
+  display: flex;
+  gap: 10px;
+}
+footer .footerSelos ul a::before {
+  height: 0;
+}
+footer .bottomRowFooter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 0;
+  text-align: center;
+  background-color: #6a46fc;
+  color: #fff;
+  font-family: var(--font-poppins);
+}
+@media (max-width: 768px) {
+  footer .bottomRowFooter {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 0 79px 0;
+  }
+}
+footer .bottomRowFooter img {
+  width: 42px;
+  height: 60px;
+}
+
+/* Whatsapp Button */
+.whatsapp-animate-circulo-pulse,
+.whatsapp-btn-bg {
+  border-radius: 100%;
+}
+
+.animated.infinite {
+  animation-iteration-count: infinite;
+}
+
+.zoomIn {
+  animation-name: zoomIn;
+}
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.whatsapp-btn {
+  display: block;
+  z-index: 2;
+}
+@media (max-width: 768px) {
+  .whatsapp-btn {
+    display: none !important;
+  }
+}
+
+.whatsapp-animate-circulo-pulse {
+  width: 90px;
+  height: 90px;
+  bottom: 96px;
+  right: 15px;
+  position: fixed;
+  background-color: transparent;
+  border-radius: 100%;
+  border: 2px solid rgba(30, 30, 30, 0.4);
+  opacity: 0.1;
+  z-index: 2;
+  border-color: #43b91e;
+}
+
+.whatsapp-btn-config {
+  width: 47px;
+  height: 47px;
+  bottom: 118px;
+  right: 37px;
+  position: fixed;
+  background: url("/selos/WhatsAppButton.webp") center center no-repeat rgba(30, 30, 30, 0.1);
+  border-radius: 100%;
+  opacity: 1;
+  transition: all 0.2s ease-in-out;
+  transform-origin: 50% 50%;
+  background-size: 100%;
+  z-index: 999999;
+}
+
+.whatsapp-btn-bg {
+  width: 60px;
+  height: 60px;
+  bottom: 111px;
+  right: 31px;
+  position: fixed;
+  -ms-transition: all 0.2s ease-in-out;
+  border-radius: 100%;
+  border: 2px solid transparent;
+  transition: all 0.5s;
+  opacity: 0.4 !important;
+  z-index: 999999;
+}
+
+.whatsapp-btn-bg,
+.whatsapp-btn-bg,
+.whatsapp-btn-config {
+  background-color: #43b91e;
+}
+
+.tada {
+  animation-name: tada;
+}
+@keyframes tada {
+  from, to {
+    transform: scale3d(1, 1, 1);
+  }
+  10%, 20% {
+    transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+  }
+  30%, 50%, 70%, 90% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+  40%, 60%, 80% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+}
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  50% {
+    opacity: 1;
+  }
+}

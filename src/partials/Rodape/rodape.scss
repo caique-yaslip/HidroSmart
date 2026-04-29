@@ -1,0 +1,368 @@
+@use "../../styles/colors.scss" as *;
+
+footer {
+  background-color: #0400ff2f;
+  color: #000;
+
+  .top {
+    display: flex;
+    align-items: center;
+    max-width: 85%;
+    padding: 70px 0;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: stretch;
+    line-height: 30px;
+
+    .menuFooter,
+    .contactFooter {
+      ul {
+        li {
+          @media (max-width: 768px) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+          }
+        }
+      }
+    }
+
+    .contactFooter {
+      display: flex;
+      flex-direction: column;
+
+      ul {
+        li {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          color: #242424;
+        }
+      }
+    }
+
+    li {
+      a {
+        font-family: var(--font-poppins);
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: fit-content;
+
+        &::before {
+          content: "";
+          background-color: #1d1d1d;
+          position: absolute;
+          left: 0px;
+          bottom: 3px;
+          width: 100%;
+          height: 2px;
+          transform: scaleX(0);
+          transition: 0.4s ease;
+          transform-origin: left;
+        }
+
+        &:hover {
+          &::before {
+            transform: scaleX(1);
+          }
+        }
+
+        @media (max-width: 768px) {
+          justify-content: center;
+        }
+      }
+    }
+
+    h2 {
+      font-size: 24px;
+      font-weight: 800;
+      font-family: var(--font-josefin);
+      color: #000;
+    }
+
+    .logoFooter {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @media (max-width: 1024px) {
+        width: 100%;
+        padding: 0 0 31px 0;
+      }
+
+      img {
+        width: 250px;
+      }
+    }
+
+    @media (max-width: 1024px) {
+      display: flex;
+      justify-items: center;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 768px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      gap: 40px;
+    }
+  }
+
+  .footerSelos {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+
+    .logoYaslip {
+      width: 130px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 200px;
+
+      a {
+        width: 100%;
+      }
+
+      object {
+        width: 100px;
+        height: 160px;
+      }
+
+      @media (max-width: 768px) {
+        width: 100%;
+
+        img {
+          width: 130px;
+        }
+      }
+    }
+
+    ul {
+      display: flex;
+      gap: 10px;
+
+      a {
+        &::before {
+          height: 0;
+        }
+      }
+    }
+  }
+
+  .bottomRowFooter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 0;
+    text-align: center;
+    background-color: #6a46fc;
+    color: #fff;
+    font-family: var(--font-poppins);
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: 20px;
+      padding: 20px 0 79px 0;
+    }
+
+    img {
+      width: 42px;
+      height: 60px;
+    }
+  }
+}
+
+/* Whatsapp Button */
+
+.whatsapp-animate-circulo-pulse,
+.whatsapp-btn-bg {
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+}
+
+.animated.infinite {
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+.zoomIn {
+  -webkit-animation-name: zoomIn;
+  animation-name: zoomIn;
+}
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.whatsapp-btn {
+  display: block;
+  z-index: 2;
+
+  @media (max-width: 768px) {
+    display: none !important;
+  }
+}
+
+.whatsapp-animate-circulo-pulse {
+  width: 90px;
+  height: 90px;
+  bottom: 96px;
+  right: 15px;
+  position: fixed;
+  background-color: transparent;
+  border-radius: 100%;
+  border: 2px solid rgba(30, 30, 30, 0.4);
+  opacity: 0.1;
+  z-index: 2;
+  border-color: #43b91e;
+}
+
+.whatsapp-btn-config {
+  width: 47px;
+  height: 47px;
+  bottom: 118px;
+  right: 37px;
+  position: fixed;
+  background: url("/selos/WhatsAppButton.webp") center center no-repeat
+    rgba(30, 30, 30, 0.1);
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  opacity: 1;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  background-size: 100%;
+  z-index: 999999;
+}
+
+.whatsapp-btn-bg {
+  width: 60px;
+  height: 60px;
+  bottom: 111px;
+  right: 31px;
+  position: fixed;
+  -ms-transition: all 0.2s ease-in-out;
+  border-radius: 100%;
+  border: 2px solid transparent;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  opacity: 0.4 !important;
+  z-index: 999999;
+}
+
+.whatsapp-btn-bg,
+.whatsapp-btn-bg,
+.whatsapp-btn-config {
+  background-color: #43b91e;
+}
+
+.tada {
+  -webkit-animation-name: tada;
+  animation-name: tada;
+}
+
+@-webkit-keyframes tada {
+  from,
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  10%,
+  20% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+  }
+
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+
+  40%,
+  60%,
+  80% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+}
+
+@keyframes tada {
+  from,
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  10%,
+  20% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+  }
+
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+
+  40%,
+  60%,
+  80% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+}
+
+@-webkit-keyframes zoomIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}

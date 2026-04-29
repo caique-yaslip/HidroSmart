@@ -1,0 +1,37 @@
+@use "../../styles/colors.scss" as *;
+
+/* ---------------------- Botao Voltar Ao Topo ------------------ */
+.voltar-para-o-topo {
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  right: 38px;
+  bottom: 35px;
+  z-index: 99;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 3px rgba(179, 179, 179, 0.568);
+  background-color: #ececec;
+  transition: all 0.3s ease;
+  
+  svg {
+    color: #4824aa;
+    transition: all 0.3s ease;
+  }
+  
+  &:hover {
+    background-color: #4824aa;
+    transition: all 0.3s ease;
+    box-shadow: inset 0 0 0 3px rgba(189, 189, 189, 0.438);
+
+    svg {
+      color: white;
+    }
+  }
+
+  @media (max-width: 768px) {
+    display: none !important;
+  }
+}
