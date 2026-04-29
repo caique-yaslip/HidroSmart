@@ -1,6 +1,6 @@
 import { SiteSettings } from "@/types";
 
-const siteName = "Site Base";
+const siteName = "Hidro Smart";
 const title = `Início | ${siteName}`;
 const description = "Exemplo";
 const keywords = "Exemplo";
