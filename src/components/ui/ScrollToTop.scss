@@ -1,0 +1,104 @@
+// ========================
+// Variáveis
+// ========================
+$size: 56px;
+// verde base
+$primary: #92bda8;
+// dourado destaque
+$accent: #ebc343;
+
+$bg-color: $primary;
+$blur: 12px;
+$text-color: #ffffff;
+$bg-ring: rgba(146, 189, 168, 0.25);
+$transition-speed: 0.5s;
+
+.scroll-button {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: $size;
+  height: $size;
+
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(135deg, #92bda8, #fff687);
+  border: 2px solid #FFFF;
+  backdrop-filter: blur($blur);
+  box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.3);
+  transition: all $transition-speed ease;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+
+  &.visible {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+
+  &.hidden {
+    transform: translateY(80px) scale(0.5);
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  // ========================
+  // SVG
+  // ========================
+  .progress-ring {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+  }
+
+  // Fundo do círculo
+  .progress-bg {
+    color: $bg-ring;
+  }
+
+  // Barra de progresso (dourada destaque)
+  .progress-bar {
+    // color: $accent;
+    color: #000;
+    transition: stroke-dashoffset 0.15s ease-out;
+  }
+
+  // ========================
+  // Texto central
+  // ========================
+  .progress-text {
+    position: relative;
+    z-index: 10;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    span {
+      font-size: 10px;
+      font-weight: bold;
+      color: $text-color;
+      line-height: 1;
+      font-family: "Numbers", sans-serif;
+      color: #000;
+    }
+  }
+}
