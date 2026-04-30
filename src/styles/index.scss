@@ -194,6 +194,11 @@
       backdrop-filter: blur(10px);
       z-index: 2;
 
+
+      @media (max-width: 768px) {
+        backdrop-filter: blur(0px);
+      }
+
       .slide-image {
         margin-bottom: 10px;
         border-radius: 15px;
@@ -265,8 +270,7 @@
 
     &.banner-3 {
       background: linear-gradient(135deg, rgba(10, 18, 37, 0.68), rgba(68, 28, 96, 0.35)),
-        url(../../public/banner/banner3.webp) center/cover no-repeat;
-      background-position: center 30%;
+        url(../../public/banner/banner3.png) center/cover no-repeat;
     }
   }
 
@@ -650,11 +654,9 @@
 
 .titlePage {
   &.info {
-    background-image: linear-gradient(
-        180deg,
+    background-image: linear-gradient(180deg,
         rgba(12, 21, 44, 0.35),
-        rgba(12, 21, 44, 0.40)
-      ),
+        rgba(12, 21, 44, 0.40)),
       url('/banner/banner2.png');
     background-size: cover;
     background-position: center;
@@ -874,6 +876,7 @@
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -885,6 +888,7 @@
     opacity: 0;
     transform: translateX(-50px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -896,6 +900,7 @@
     opacity: 0;
     transform: translateX(50px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -906,6 +911,7 @@
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -915,6 +921,7 @@
   from {
     width: 0;
   }
+
   to {
     width: 100px;
   }
@@ -984,7 +991,7 @@
           display: flex;
           gap: 10px;
           padding: 10px 0;
-          font-size: 1.2rem;
+          font-size: 0.9rem;
           width: fit-content;
           align-items: center;
           color: rgb(63, 63, 63);
@@ -1048,13 +1055,9 @@
 
 
 
-.produtos-container{
+.produtos-container {
 
-  .produtos-title{
+  .produtos-title {}
 
-  }
-
-  .produtos-grid{
-
-  }
+  .produtos-grid {}
 }

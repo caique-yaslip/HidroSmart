@@ -29,7 +29,7 @@ export const settings: SiteSettings = {
   // email: "wesley@yaslip.com.br",
   // emailDestinatario: "wesley@yaslip.com.br",
   email: "atendimento@hidrosmartvp.com.br",
-  emailDestinatario: "andersonmelo.yaslip@gmail.com",
+  emailDestinatario: "caique.yaslip@gmail.com",
   endereco: {
     urlMaps: "https://maps.app.goo.gl/caH1G5Rs1tBdgBRw9",
     rua: "Rua dos Patriotas",
